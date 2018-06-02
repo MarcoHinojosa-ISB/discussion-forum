@@ -1,0 +1,13 @@
+<!-- view -->
+<template>
+  <div id="app">
+    <router-view />
+  </div>
+</template>
+
+<!-- controller -->
+<script>
+  export default {
+    name: "app"
+  }
+</script>
