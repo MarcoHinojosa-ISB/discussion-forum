@@ -1,0 +1,33 @@
+#categories{
+  width: 100%;
+
+  th{
+    color: $categories-table-th-font-color;
+    text-align: left;
+    border-bottom: 3px solid $categories-table-border-color;
+    padding: 5px;
+  }
+  .category-panel{
+    td{
+      padding: 5px;
+
+      a{
+        text-decoration: none;
+        color: $categories-table-td-font-color;
+        font-weight: bold;
+
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+      p{
+        color: $categories-table-td-font-color;
+        font-size: 10px;
+      }
+    }
+
+    + .category-panel td{
+      border-top: 1px solid $categories-table-border-color;
+    }
+  }
+}

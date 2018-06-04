@@ -1,0 +1,33 @@
+#register{
+  h2{
+    text-align: center;
+    color: $register-font-color;
+    margin: 5px;
+  }
+  form{
+    background-color: $register-bg-color;
+    margin: 0 auto;
+    padding: 10px 0px;
+    text-align: center;
+
+    @media (max-width: $mobile-max){
+      width: 75%;
+    }
+    @media (min-width: $desktop-min){
+      width: 500px;
+    }
+
+    input, .error{
+      display: block;
+      width: 80%;
+      margin: 0 auto;
+      padding: 3px;
+      border: none;
+      text-align: left;
+
+
+    }
+
+    @include border-radius(3px);
+  }
+}
