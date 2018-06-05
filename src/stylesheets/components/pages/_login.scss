@@ -1,0 +1,51 @@
+#login{
+  h2{
+    text-align: center;
+    color: $login-font-color;
+    margin: 5px;
+  }
+
+  form{
+    background-color: $login-bg-color;
+    margin: 0 auto;
+    padding: 20px 0px;
+    text-align: center;
+
+    @media (max-width: $mobile-max){
+      width: 75%;
+    }
+    @media (min-width: $desktop-min){
+      width: 500px;
+    }
+
+    input, .error{
+      display: block;
+      width: 80%;
+      margin: 0 auto;
+      padding: 3px;
+      border: none;
+      text-align: left;
+    }
+    .error{
+      color: $login-error-font-color;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    button[type="submit"]{
+      display: block;
+      background-color: $register-btn-bg-color;
+      color: $register-btn-font-color;
+      width: 80%;
+      margin: 0 auto;
+      padding: 5px;
+      border: none;
+
+      &:hover{
+        cursor: pointer;
+      }
+    }
+
+    @include border-radius(3px);
+  }
+}

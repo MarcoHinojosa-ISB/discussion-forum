@@ -6,6 +6,8 @@ var bodyParser = require('body-parser');
 
 var app = express();
 
+// get api routes
+var auth = require("./backend/api/auth.js");
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
@@ -19,9 +21,12 @@ app.use(function (req, res, next) {
   next();
 });
 
+//connect static assets
 app.use("/node_modules", express.static(path.join(__dirname, "node_modules")));
 app.use("/src", express.static(path.join(__dirname, "src")));
 
+//connect api routes
+app.use("/api/auth", auth.routes);
 
 app.use("/", function(req, res){
   res.sendFile(__dirname + "/index.html");

@@ -7,7 +7,7 @@
   form{
     background-color: $register-bg-color;
     margin: 0 auto;
-    padding: 10px 0px;
+    padding: 20px 0px;
     text-align: center;
 
     @media (max-width: $mobile-max){
@@ -24,8 +24,25 @@
       padding: 3px;
       border: none;
       text-align: left;
+    }
+    .error{
+      color: $register-error-font-color;
+      font-size: 12px;
+      font-weight: bold;
+    }
 
+    button[type="submit"]{
+      display: block;
+      background-color: $register-btn-bg-color;
+      color: $register-btn-font-color;
+      width: 80%;
+      margin: 0 auto;
+      padding: 5px;
+      border: none;
 
+      &:hover{
+        cursor: pointer;
+      }
     }
 
     @include border-radius(3px);
