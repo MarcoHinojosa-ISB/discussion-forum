@@ -27,8 +27,13 @@
       return {
         topicId: this.$route.params.topic_id,
         topicTitle: this.$route.params.topic_title,
+        category: this.$route.params.category,
         message: ""
       }
+    },
+    created: function(){
+      if(!store.getState().user.username)
+        this.$router.push("/login");
     },
     methods: {
       handleSubmit: function(e){
@@ -41,7 +46,7 @@
 
         Axios.post("/api/topics/new-post", data)
         .then(result => {
-          console.log(result);
+          this.$router.push("/cat/" + this.category + "/" + this.topicId + "/" + this.topicTitle);
         })
         .catch(err => {
           console.log(err);

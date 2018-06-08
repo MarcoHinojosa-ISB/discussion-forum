@@ -1,23 +1,15 @@
 <!-- view -->
 <template>
   <div id="header">
-    <h1 v-on:click="redirectToHome">DF</h1>
+    <h1 v-on:click="redirectToHome">Discussion</h1>
 
     <ul v-if="!isUserLoggedIn()">
-      <li>
-        <router-link to="/login">Login</router-link>
-      </li>
-      <li>
-        <router-link to="/register">Register</router-link>
-      </li>
+      <li><router-link to="/login">Login</router-link></li>
+      <li><router-link to="/register">Register</router-link></li>
     </ul>
     <ul v-else>
-      <li>
-        <span class="username">{{username}}</span>
-      </li>
-      <li>
-        <button v-on:click="logout">Logout</button>
-      </li>
+      <li><span class="username">{{username}}</span></li>
+      <li><button v-on:click="logout">Logout</button></li>
     </ul>
   </div>
 </template>

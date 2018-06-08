@@ -60,7 +60,7 @@
         topics: []
       }
     },
-    beforeMount: function(){
+    created: function(){
       Axios.get("/api/topics/retrieve-topics?category="+this.category)
       .then( result => {
         this.topics = result.data.rows;
@@ -72,7 +72,7 @@
     },
     methods: {
       transformDate: function(d){
-        return Moment(new Date(d), 'MM-DD-YYYY').format('MM/DD/YYYY');
+        return Moment(new Date(d), 'MM-DD-YYYY hh:mm a').format('MM/DD/YYYY hh:mm a');
       }
     }
   }

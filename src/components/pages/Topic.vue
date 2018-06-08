@@ -42,10 +42,9 @@
         posts: []
       }
     },
-    beforeMount: function(){
+    created: function(){
       Axios.get("/api/topics/retrieve-posts?topic_id="+this.$route.params.topic_id)
       .then(result => {
-        console.log(result.data.rows)
         this.posts = result.data.rows;
       })
       .catch(err => {
@@ -54,7 +53,7 @@
     },
     methods: {
       transformDate: function(d){
-        return Moment(new Date(d), 'MM-DD-YYYY').format('MM/DD/YYYY');
+        return Moment(new Date(d), 'MM-DD-YYYY hh:mm a').format('MM/DD/YYYY hh:mm a');
       }
     }
   }

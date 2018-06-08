@@ -3,7 +3,7 @@
   background-color: $header-bg-color;
   height: 80px;
 
-  >h1{
+  h1{
     color: $header-font-color;
     position: absolute;
     left: 30px;
@@ -15,7 +15,7 @@
     }
   }
 
-  >ul{
+  ul{
     display: inline-block;
     list-style-type: none;
     position: absolute;
@@ -47,7 +47,7 @@
 
       .username{
         color: $header-font-color;
-        font-size: 20px;
+        font-size: 14px;
         font-weight: bold;
       }
     }
