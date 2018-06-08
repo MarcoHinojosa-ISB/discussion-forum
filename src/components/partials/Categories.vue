@@ -1,11 +1,7 @@
 <!-- view -->
 <template>
   <table id="categories">
-    <thead>
-      <tr>
-        <th>Category</th>
-      </tr>
-    </thead>
+    <thead></thead>
     <tbody>
       <tr class="category-panel" v-for="c in categories">
         <td>
@@ -26,22 +22,22 @@
         categories: [
           {
             name: "Literature",
-            url: "/cat/lit",
+            url: "/cat/literature",
             description: "Discuss topics about literature"
           },
           {
             name: "Technology",
-            url: "/cat/tech",
+            url: "/cat/technology",
             description: "Discuss topics about technology"
           },
           {
             name: "Medicine",
-            url: "/cat/med",
+            url: "/cat/medicine",
             description: "Discuss topics about medicine"
           },
           {
             name: "Politics",
-            url: "/cat/pol",
+            url: "/cat/politics",
             description: "Discuss topics about politics"
           },
           {
@@ -55,13 +51,13 @@
             description: "Discuss topics about art"
           },
           {
-            name: "Video Games",
-            url: "/cat/vg",
+            name: "Video games",
+            url: "/cat/video games",
             description: "Discuss topics about video games"
           },
           {
             name: "Television",
-            url: "/cat/tv",
+            url: "/cat/television",
             description: "Discuss topics about tv shows"
           },
           {

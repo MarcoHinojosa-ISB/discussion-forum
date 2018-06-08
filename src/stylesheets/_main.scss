@@ -7,8 +7,13 @@
 @import "./components/pages/home";
 @import "./components/pages/login";
 @import "./components/pages/register";
+@import "./components/pages/topicList";
+@import "./components/pages/topicCreate";
+@import "./components/pages/topic";
+@import "./components/pages/postCreate";
 @import "./components/partials/categories";
 @import "./components/partials/header";
+
 
 * {
   box-sizing: border-box;

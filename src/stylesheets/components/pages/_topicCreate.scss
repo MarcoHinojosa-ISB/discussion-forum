@@ -1,0 +1,63 @@
+#topic-create{
+  h3{
+    color: $topicCreate-font-color;
+    text-align: center;
+  }
+
+  form{
+    @media (max-width: $mobile-max){
+      width: 300px;
+      margin: 0 auto;
+
+      .title{
+        display: block;
+        background-color: $topicCreate-bg-color;
+        width: 100%;
+        font-size: 14px;
+        border: none;
+        margin: 10px auto;
+      }
+      .post{
+        display: block;
+        background-color: $topicCreate-bg-color;
+        width: 100%;
+        height: 200px;
+        resize: none;
+        border: none;
+        margin: 10px auto;
+      }
+    }
+    @media (min-width: $desktop-min){
+      width: 450px;
+      margin: 0 auto;
+
+      .title{
+        display: block;
+        background-color: $topicCreate-bg-color;
+        width: 100%;
+        font-size: 14px;
+        border: none;
+        margin: 10px auto;
+      }
+      .post{
+        display: block;
+        background-color: $topicCreate-bg-color;
+        width: 100%;
+        height: 200px;
+        resize: none;
+        border: none;
+        margin: 10px auto;
+      }
+    }
+  }
+  .submit{
+    background-color: $topicCreate-submit-bg-color;
+    color: $topicCreate-submit-font-color;
+    border: none;
+    padding: 7px 13px;
+
+    &:hover{
+      cursor: pointer;
+    }
+  }
+}

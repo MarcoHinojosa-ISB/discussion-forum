@@ -17,7 +17,7 @@ module.exports = {
           done();
           if(err){
             callback(err, null);
-            console.log("Query Error");
+            console.log("Query Error: ", err);
           }
           else{
             callback(null, result);

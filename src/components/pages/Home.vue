@@ -4,6 +4,7 @@
     <App-Header />
 
     <div id="home">
+      <h2>Choose a Category</h2>
       <Categories />
     </div>
   </div>

@@ -48,5 +48,6 @@ function checkExistingUsernames(username, callback){
 
 module.exports = {
   register: register,
-  login: login
+  login: login,
+  checkExistingUsernames: checkExistingUsernames
 };

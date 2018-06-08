@@ -1,15 +1,23 @@
 #categories{
   width: 100%;
+  border-collapse: collapse;
 
-  th{
-    color: $categories-table-th-font-color;
-    text-align: left;
-    border-bottom: 3px solid $categories-table-border-color;
-    padding: 5px;
-  }
+  // .category-head{
+  //   th{
+  //     color: $categories-table-th-font-color;
+  //     text-align: left;
+  //     border-bottom: 3px solid $categories-table-border-color;
+  //     padding: 5px;
+  //   }
+  // }
   .category-panel{
+    border-left: 3px solid $categories-table-border-color;
+    border-top: 1px solid $categories-table-border-color;
+    border-bottom: 1px solid $categories-table-border-color;
+
     td{
       padding: 5px;
+      margin: 0px;
 
       a{
         text-decoration: none;
@@ -24,10 +32,6 @@
         color: $categories-table-td-font-color;
         font-size: 10px;
       }
-    }
-
-    + .category-panel td{
-      border-top: 1px solid $categories-table-border-color;
     }
   }
 }

@@ -8,6 +8,7 @@ var app = express();
 
 // get api routes
 var auth = require("./backend/api/auth.js");
+var topics = require("./backend/api/topics.js");
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
@@ -27,6 +28,7 @@ app.use("/src", express.static(path.join(__dirname, "src")));
 
 //connect api routes
 app.use("/api/auth", auth.routes);
+app.use("/api/topics", topics.routes);
 
 app.use("/", function(req, res){
   res.sendFile(__dirname + "/index.html");

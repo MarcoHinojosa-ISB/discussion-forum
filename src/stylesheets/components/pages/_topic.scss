@@ -1,0 +1,79 @@
+#topic{
+  @media (max-width: $mobile-max){
+    width: 95%;
+  }
+  @media (min-width: $desktop-min){
+    width: 90%;;
+  }
+  margin: 0 auto;
+
+  h3{
+    color: $topic-font-color;
+  }
+
+  //breadcrumb navigation
+  .breadcrumbs{
+    list-style-type: none;
+    padding-left: 0px;
+    margin: 5px;
+    margin-left: 0px;
+
+    li{
+      font-size: 12px;
+      display: inline-block;
+      background-color: $topicList-breacrumbs-bg-color;
+      color: $topicList-font-color;
+      line-height: 25px;
+
+      a{
+        display: inline-block;
+        color: $topicList-font-color;
+        text-decoration: none;
+        font-weight: bold;
+        padding: 0px 5px;
+      }
+      span{
+        display: inline-block;
+        padding: 0px 5px;
+      }
+    }
+  }
+
+  //post
+  .post{
+    border: 1px solid $topic-border-color;
+
+    .header{
+      position: relative;
+      background-color: $topic-border-color;
+      color: $header-font-color;
+      height: 20px;
+
+      .username{
+        position: absolute;
+        left: 10px;
+      }
+      .date{
+        position: absolute;
+        right: 10px;
+      }
+    }
+
+    .message{
+      background-color: $topic-bg-color;
+      color: $topic-font-color;
+      min-height: 60px;
+      padding: 10px;
+    }
+  }
+
+  .new-post-btn{
+    display: inline-block;
+    background-color: $topic-new-post-bg-color;
+    color: $topic-new-post-font-color;
+    text-decoration: none;
+    font-size: 12px;
+    margin: 10px 0px;
+    padding: 3px;
+  }
+}

@@ -1,4 +1,10 @@
 #home{
   width: 90%;
   margin: 0 auto;
+  margin-bottom: 10px;
+
+  h2{
+    color: $header-font-color;
+    padding-left: 5px;
+  }
 }
