@@ -18,6 +18,8 @@
 <script>
   import store from "../../store/index.js";
   import {loggedOut} from "../../store/actions/userActions.js";
+  import jwt from "jsonwebtoken";
+  import jwtsecret from "../../../jwtsecret.js";
 
   export default {
     data: function(){
@@ -30,13 +32,15 @@
         this.$router.push({ path: "/" });
       },
       isUserLoggedIn: function(){
-        if(store.getState().user.username){
-          this.username = store.getState().user.username;
-          return true;
+        try{
+          var userdata = jwt.verify(store.getState().user.authToken, jwtsecret.secret);
         }
-        else{
+        catch(err){
           return false;
         }
+
+        this.username = userdata.username;
+        return true; 
       },
       logout: function(){
         store.dispatch(loggedOut());

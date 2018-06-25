@@ -1,9 +1,7 @@
-function loggedIn(username, firstname, lastname){
+function loggedIn(authToken){
   return {
     type: "LOGGED_IN",
-    username,
-    firstname,
-    lastname
+    authToken
   }
 }
 

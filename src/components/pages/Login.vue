@@ -51,7 +51,7 @@
 
         Axios.post("/api/auth/login", this.loginInput)
         .then((result) => {
-          store.dispatch(loggedIn(result.data.username, result.data.firstname, result.data.lastname));
+          store.dispatch(loggedIn(result.data));
           this.$router.push({ path: '/' });
         })
         .catch((err) =>{
