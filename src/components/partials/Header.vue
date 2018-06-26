@@ -13,9 +13,9 @@
     </ul>
     <ul v-else>
       <li class="logged-in">
-        <span class="username">{{username}}</span>
+        <span class="username">{{username}} <i class="fa fa-caret-down"></i></span>
         <div class="dropdown">
-          <button v-on:click="logout">Logout</button>
+          <button v-on:click="logout">Log Out</button>
         </div>
       </li>
     </ul>

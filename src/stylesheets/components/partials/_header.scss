@@ -47,8 +47,9 @@
         position: absolute;
         right: 0px;
         background-color: $bg-color;
-        padding: 10px 0px;
-        border: 1px solid black;
+        width: 80px;
+        padding: 10px 3px;
+        border: 1px solid $header-font-color;
         display: none;
 
         button{
