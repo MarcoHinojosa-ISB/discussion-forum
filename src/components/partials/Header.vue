@@ -4,12 +4,20 @@
     <h1 v-on:click="redirectToHome">Discussion</h1>
 
     <ul v-if="!isUserLoggedIn()">
-      <li><router-link to="/login">Login</router-link></li>
-      <li><router-link to="/register">Register</router-link></li>
+      <li>
+        <router-link to="/login">Login</router-link>
+      </li>
+      <li>
+        <router-link to="/register">Register</router-link>
+      </li>
     </ul>
     <ul v-else>
-      <li><span class="username">{{username}}</span></li>
-      <li><button v-on:click="logout">Logout</button></li>
+      <li class="logged-in">
+        <span class="username">{{username}}</span>
+        <div class="dropdown">
+          <button v-on:click="logout">Logout</button>
+        </div>
+      </li>
     </ul>
   </div>
 </template>
@@ -40,7 +48,7 @@
         }
 
         this.username = userdata.username;
-        return true; 
+        return true;
       },
       logout: function(){
         store.dispatch(loggedOut());

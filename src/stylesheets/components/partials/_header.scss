@@ -6,20 +6,18 @@
   h1{
     color: $header-font-color;
     position: absolute;
-    left: 30px;
+    left: 5%;
     margin: 0px;
     line-height: 80px;
-
-    &:hover{
-      cursor: pointer;
-    }
+    font-size: 30px;
+    cursor: pointer;
   }
 
   ul{
     display: inline-block;
     list-style-type: none;
     position: absolute;
-    right: 30px;
+    right: 5%;
     margin: 0px;
     padding-left: 0px;
     line-height: 80px;
@@ -29,13 +27,13 @@
       margin: 2px;
       line-height: 20px;
 
-      a, button{
+      a{
         text-decoration: none;
         background-color: $header-btn-bg-color;
         color: $header-btn-font-color;
         font-size: 14px;
         border: 2px solid transparent;
-        padding: 2px 7px;
+        padding: 2px 3px;
 
         &:hover{
           background-color: $header-btn-font-color;
@@ -45,11 +43,38 @@
         }
       }
 
+      .dropdown{
+        position: absolute;
+        right: 0px;
+        background-color: $bg-color;
+        padding: 10px 0px;
+        border: 1px solid black;
+        display: none;
+
+        button{
+          background-color: $bg-color;
+          color: $header-font-color;
+          padding: 5px;
+          border: none;
+          cursor: pointer;
+
+          @media (min-width: $desktop-min){
+            font-size: 15px;
+          }
+        }
+      }
       .username{
         color: $header-font-color;
         font-size: 14px;
         font-weight: bold;
+
+        @media (min-width: $desktop-min){
+          font-size: 20px;
+        }
       }
+    }
+    .logged-in:hover .dropdown, .logged-in:active .dropdown{
+      display: block;
     }
   }
 }

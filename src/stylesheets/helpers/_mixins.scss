@@ -4,3 +4,16 @@
   -ms-border-radius: $radius;
   border-radius: $radius;
 }
+
+@mixin inner-shadow($size){
+  -moz-box-shadow:    inset 0 0 $size #000000;
+  -webkit-box-shadow: inset 0 0 $size #000000;
+  box-shadow:         inset 0 0 $size #000000;
+}
+
+@mixin white-space-pre-wrap(){
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;      
+  white-space: -o-pre-wrap;
+}

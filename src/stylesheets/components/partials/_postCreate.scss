@@ -1,0 +1,60 @@
+#post-create{
+  h2{
+    color: $postCreate-font-color;
+    border-bottom: 2px solid $topic-border-color;
+  }
+  .preview{
+    background-color: $topic-bg-color;
+    color: $topic-font-color;
+    padding: 10px;
+    border: 1px solid $topic-border-color;
+
+    pre{
+      @include white-space-pre-wrap();
+      word-wrap: break-word;
+
+      .spoiler{
+        background-color: $topic-font-color;
+      }
+    }
+  }
+  
+  form{
+    .style-buttons{
+      margin: 5px;
+
+      button{
+        background-color: $postCreate-style-bg-color;
+        padding: 4px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        @include inner-shadow(3px);
+
+        &.active{
+          background-color: $postCreate-style-active-bg-color;
+        }
+      }
+    }
+
+    .post{
+      display: block;
+      background-color: $postCreate-bg-color;
+      width: 65%;
+      height: 100px;
+      margin: 5px;
+      border: none;
+      @include inner-shadow(3px);
+    }
+    .preview-btn{
+      margin-left: 5px;
+    }
+    .preview-btn, .submit{
+      padding: 4px;
+      border: none;
+      cursor: pointer;
+      @include inner-shadow(2px);
+    }
+    margin-bottom: 10px;
+  }
+}

@@ -7,7 +7,6 @@ import Register from "./components/pages/Register.vue";
 import TopicList from "./components/pages/TopicList.vue";
 import TopicCreate from "./components/pages/TopicCreate.vue";
 import Topic from "./components/pages/Topic.vue";
-import PostCreate from "./components/pages/PostCreate.vue";
 
 Vue.use(vueRouter);
 
@@ -33,11 +32,6 @@ var router = new vueRouter({
       path: "/cat/:category/:topic_id/:topic_title",
       name: "Topic",
       component: Topic
-    },
-    {
-      path: "/cat/:category/:topic_id/:topic_title/new-post",
-      name: "PostCreate",
-      component: PostCreate
     },
     {
       path: "/login",

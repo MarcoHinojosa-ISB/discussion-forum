@@ -23,10 +23,12 @@
 
 <!-- controller -->
 <script>
+  import Header from "../partials/Header.vue";
   import Axios from "axios";
+  import jwt from "jsonwebtoken";
+  import jwtsecret from "../../../jwtsecret.js";
   import store from "../../store/index.js";
   import {loggedIn} from '../../store/actions/userActions.js';
-  import Header from "../partials/Header.vue";
 
   export default {
     components: {
@@ -47,6 +49,18 @@
           password: ""
         },
         serverError: ""
+      }
+    },
+    created: function(){
+      try{
+        var userdata = jwt.verify(store.getState().user.authToken, jwtsecret.secret);
+      }
+      catch(err){
+        //no need to handle error
+        return;
+      }
+      if(userdata){
+        this.$router.push("/");
       }
     },
     methods: {

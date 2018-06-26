@@ -1,10 +1,10 @@
 #register{
-  padding: 10px;
   h2{
     text-align: center;
     color: $register-font-color;
     margin: 5px;
   }
+
   form{
     background-color: $register-bg-color;
     margin: 0 auto;
@@ -40,10 +40,7 @@
       margin: 5px 0px;
       padding: 5px;
       border: none;
-
-      &:hover{
-        cursor: pointer;
-      }
+      cursor: pointer;
     }
   }
 }

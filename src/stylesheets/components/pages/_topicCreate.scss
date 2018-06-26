@@ -3,7 +3,22 @@
     color: $topicCreate-font-color;
     text-align: center;
   }
+  .style-buttons{
+    margin: 5px 0px;
 
+    button{
+      background-color: $postCreate-style-bg-color;
+      padding: 4px;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      @include inner-shadow(3px);
+
+      &.active{
+        background-color: $postCreate-style-active-bg-color;
+      }
+    }
+  }
   form{
     @media (max-width: $mobile-max){
       width: 300px;
@@ -16,6 +31,7 @@
         font-size: 14px;
         border: none;
         margin: 10px auto;
+        @include inner-shadow(2px);
       }
       .post{
         display: block;
@@ -25,6 +41,7 @@
         resize: none;
         border: none;
         margin: 10px auto;
+        @include inner-shadow(3px);
       }
     }
     @media (min-width: $desktop-min){
@@ -38,6 +55,7 @@
         font-size: 14px;
         border: none;
         margin: 10px auto;
+        @include inner-shadow(2px);
       }
       .post{
         display: block;
@@ -47,6 +65,7 @@
         resize: none;
         border: none;
         margin: 10px auto;
+        @include inner-shadow(3px);
       }
     }
   }
@@ -55,9 +74,6 @@
     color: $topicCreate-submit-font-color;
     border: none;
     padding: 7px 13px;
-
-    &:hover{
-      cursor: pointer;
-    }
+    cursor: pointer;
   }
 }
