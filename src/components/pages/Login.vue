@@ -45,7 +45,6 @@
       }
     },
     created: function(){
-      console.log("hello")
       try{
         var userdata = jwt.verify(store.getState().user.authToken, jwtsecret.secret);
       }

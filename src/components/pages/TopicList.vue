@@ -34,10 +34,6 @@
           </tr>
         </tbody>
       </table>
-      <ul class="breadcrumbs">
-        <li><router-link to="/">Home &#9656;</router-link></li>
-        <li><span>{{category}}</span></li>
-      </ul>
 
       <router-link :to="'/cat/' + category + '/create'" class="new-topic-btn">New Topic</router-link>
     </div>
@@ -64,7 +60,6 @@
       Axios.get("/api/topics/retrieve-topics?category="+this.category)
       .then( result => {
         this.topics = result.data.rows;
-        console.log(this.topics)
       })
      .catch( err => {
        console.log(err);
