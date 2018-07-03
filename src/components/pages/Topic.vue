@@ -9,7 +9,7 @@
       <ul class="breadcrumbs">
         <li><router-link :to="'/'">Home &#9656;</router-link></li>
         <li><router-link :to="'/cat/' + category">{{category.toUpperCase()[0] + category.slice(1)}} &#9656;</router-link></li>
-        <li><span>{{topicTitle}}</span></li>
+        <li><span>Topic</span></li>
       </ul>
 
       <!-- posts -->
