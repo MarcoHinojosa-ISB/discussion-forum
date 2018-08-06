@@ -27,8 +27,6 @@
 <!-- controller -->
 <script>
   import Axios from "axios";
-  import jwt from "jsonwebtoken";
-  import jwtsecret from "../../../jwtsecret.js";
 
   export default {
     props: ['username', 'category', 'topicTitle','topicId', 'totalPosts', 'postsPerPage'],
@@ -43,27 +41,27 @@
       }
     },
     methods: {
+      // add html tags to message for style effects
       styleText: function(type){
         var textArea = this.$refs.post;
-        var startPos = textArea.selectionStart;
-        var endPos = textArea.selectionEnd;
+        var cursor = textArea.selectionStart;
         var tmpText= textArea.value;
 
         switch(type){
           case "bold":
-            this.textInput = tmpText.substring(0, startPos) + (!this.bold ? "<b>" : "</b>") + tmpText.substring(endPos, tmpText.length);
+            this.textInput = tmpText.substring(0, cursor) + (!this.bold ? "<b>" : "</b>") + tmpText.substring(cursor, tmpText.length);
             this.bold = !this.bold;
             break;
           case "italic":
-            this.textInput = tmpText.substring(0, startPos) + (!this.italic ? "<i>" : "</i>") + tmpText.substring(endPos, tmpText.length);
+            this.textInput = tmpText.substring(0, cursor) + (!this.italic ? "<i>" : "</i>") + tmpText.substring(cursor, tmpText.length);
             this.italic = !this.italic;
             break;
           case "underline":
-            this.textInput = tmpText.substring(0, startPos) + (!this.underline ? "<u>" : "</u>") + tmpText.substring(endPos, tmpText.length);
+            this.textInput = tmpText.substring(0, cursor) + (!this.underline ? "<u>" : "</u>") + tmpText.substring(cursor, tmpText.length);
             this.underline = !this.underline;
             break;
           case "spoiler":
-            this.textInput = tmpText.substring(0, startPos) + (!this.spoiler ? "<span class='spoiler'>" : "</span>") + tmpText.substring(endPos, tmpText.length);
+            this.textInput = tmpText.substring(0, cursor) + (!this.spoiler ? "<span class='spoiler'>" : "</span>") + tmpText.substring(cursor, tmpText.length);
             this.spoiler = !this.spoiler;
             break;
         }

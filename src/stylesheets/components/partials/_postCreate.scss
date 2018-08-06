@@ -18,10 +18,10 @@
       }
     }
   }
-  
+
   form{
     .style-buttons{
-      margin: 5px;
+      margin: 5px 5px 5px 0px;
 
       button{
         background-color: $postCreate-style-bg-color;
@@ -40,15 +40,19 @@
     .post{
       display: block;
       background-color: $postCreate-bg-color;
-      width: 65%;
       height: 100px;
-      margin: 5px;
+      margin: 5px 5px 5px 0px;
       border: none;
       @include inner-shadow(3px);
+
+      @media only screen and (max-width: $mobile-max){
+        width: 100%;
+      }
+      @media only screen and (min-width: $desktop-min){
+        width: 65%;
+      }
     }
-    .preview-btn{
-      margin-left: 5px;
-    }
+
     .preview-btn, .submit{
       padding: 4px;
       border: none;

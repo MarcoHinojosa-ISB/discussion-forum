@@ -32,8 +32,7 @@ function retrieveTopics(data, callback){
   query("SELECT topics.id, users.username, topics.title, topics.last_updated, COUNT(posts.id) as post_num " +
   "FROM topics, users, posts WHERE topics.category=$1 AND users.id=topics.user_id AND posts.topic_id=topics.id " +
   "GROUP BY topics.id, users.username, topics.title, topics.last_updated ORDER BY topics.last_updated", [data], function(err, result){
-    err ? callback(err, null) : callback(null, result)
-
+    err ? callback(err, null) : callback(null, result);
   })
 }
 function retrievePosts(data, callback){

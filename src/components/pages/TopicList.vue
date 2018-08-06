@@ -21,7 +21,9 @@
         </thead>
         <tbody>
           <tr class="topic-panel" v-for="t in topics">
-            <td class="topic"><router-link :to="'/cat/' + category + '/' + t.id + '/' + t.title">{{t.title}}</router-link></td>
+            <td class="topic">
+              <router-link :to="'/cat/' + category + '/' + t.id + '/' + t.title">{{t.title}}</router-link>
+            </td>
             <td class="creator">{{t.username}}</td>
             <td class="posts">{{t.post_num}}</td>
             <td class="date">{{transformDate(t.last_updated)}}</td>

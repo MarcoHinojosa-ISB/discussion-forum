@@ -1,14 +1,12 @@
 <!-- view -->
 <template>
-  <div>
-    <div id="post">
-      <div class="header">
-        <span class="username">{{postData.username}}</span>
-        <span class="date">{{transformDate(postData.date_created)}}</span>
-      </div>
-      <div class="message">
-        <pre v-html="postData.message"></pre>
-      </div>
+  <div class="post">
+    <div class="header">
+      <span class="username">{{postData.username}}</span>
+      <span class="date">{{transformDate(postData.date_created)}}</span>
+    </div>
+    <div class="message">
+      <pre v-html="postData.message"></pre>
     </div>
   </div>
 </template>
