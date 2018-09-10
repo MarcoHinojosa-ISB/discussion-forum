@@ -2,6 +2,8 @@ var bodyParser = require("body-parser");
 
 //get api routes
 var auth = require("./backend/api/auth.js");
+var posts = require("./backend/api/posts.js");
+var profiles = require("./backend/api/profiles.js");
 var topics = require("./backend/api/topics.js");
 
 module.exports = {
@@ -57,6 +59,8 @@ module.exports = {
 
       //connect api routes
       app.use("/api/auth", auth.routes);
+      app.use("/api/posts", posts.routes);
+      app.use("/api/profiles", profiles.routes);
       app.use("/api/topics", topics.routes);
     }
   }

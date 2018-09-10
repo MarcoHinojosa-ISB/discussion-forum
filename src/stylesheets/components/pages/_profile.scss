@@ -1,0 +1,11 @@
+#profile{
+  @media (max-width: $mobile-max){
+    width: 95%;
+  }
+  @media (min-width: $desktop-min){
+    width: 90%;;
+  }
+  margin: 0 auto;
+
+  color: $profile-font-color
+}

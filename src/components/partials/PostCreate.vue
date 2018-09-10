@@ -81,7 +81,7 @@
           username: this.username,
           topic_id: this.topicId
         }
-        Axios.post("/api/topics/new-post", data)
+        Axios.post("/api/posts/new-post", data)
         .then(result => {
           this.preview = false;
           this.textInput = "";

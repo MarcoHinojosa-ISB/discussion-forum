@@ -8,6 +8,8 @@ var app = express();
 
 // get api routes
 var auth = require("./backend/api/auth.js");
+var posts = require("./backend/api/posts.js");
+var profiles = require("./backend/api/profiles.js");
 var topics = require("./backend/api/topics.js");
 
 // uncomment after placing your favicon in /public
@@ -28,6 +30,8 @@ app.use("/src", express.static(path.join(__dirname, "src")));
 
 //connect api routes
 app.use("/api/auth", auth.routes);
+app.use("/api/posts", posts.routes);
+app.use("/api/profiles", profiles.routes);
 app.use("/api/topics", topics.routes);
 
 app.use("/", function(req, res){

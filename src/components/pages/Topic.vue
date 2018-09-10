@@ -78,9 +78,7 @@
         var userdata = jwt.verify(store.getState().user.authToken, jwtsecret.secret);
         this.username = userdata.username;
       }
-      catch(err){
-
-      }
+      catch(err){}
     },
     methods: {
       notFirst: function(){
@@ -105,15 +103,19 @@
           this.$router.push("/cat/"+this.category+"/"+this.topicId+"/"+this.topicTitle);
       },
       updatePosts: function(){
-        Axios.get("/api/topics/retrieve-posts?topic_id="+this.$route.params.topic_id)
+        Axios.get("/api/posts/retrieve-posts?topic_id="+this.$route.params.topic_id)
         .then(result => {
+          // get all pages
           this.allPosts = result.data.rows;
 
+          // if not first page of topic, update current page index
           if(this.$route.query.page)
             this.currentPageIndex = parseInt(this.$route.query.page);
 
+          // show a chunk of posts based on current page index
           this.currentPosts = this.allPosts.slice(this.currentPageIndex * this.postsPerPage, (this.currentPageIndex * this.postsPerPage) + this.postsPerPage);
 
+          // show number of pages
           this.pages = [];
           for(var i=1, p=0; p<this.allPosts.length; i++, p+=this.postsPerPage){
             this.pages.push(i);

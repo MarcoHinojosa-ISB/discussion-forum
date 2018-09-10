@@ -7,6 +7,7 @@ import Register from "./components/pages/Register.vue";
 import TopicList from "./components/pages/TopicList.vue";
 import TopicCreate from "./components/pages/TopicCreate.vue";
 import Topic from "./components/pages/Topic.vue";
+import ProfileOwn from "./components/pages/ProfileOwn.vue";
 
 Vue.use(vueRouter);
 
@@ -42,6 +43,11 @@ var router = new vueRouter({
       path: "/register",
       name: "Register",
       component: Register
+    },
+    {
+      path: "/profile-own",
+      name: "ProfileOwn",
+      component: ProfileOwn
     }
   ]
 });

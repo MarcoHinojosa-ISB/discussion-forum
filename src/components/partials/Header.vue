@@ -15,6 +15,7 @@
       <li class="logged-in">
         <span class="username">{{username}} <i class="fa fa-caret-down"></i></span>
         <div class="dropdown">
+          <button v-on:click="profile">Profile</button>
           <button v-on:click="logout">Log Out</button>
         </div>
       </li>
@@ -42,13 +43,15 @@
       isUserLoggedIn: function(){
         try{
           var userdata = jwt.verify(store.getState().user.authToken, jwtsecret.secret);
+          this.username = userdata.username;
+          return true;
         }
         catch(err){
           return false;
         }
-
-        this.username = userdata.username;
-        return true;
+      },
+      profile: function(){
+        this.$router.push({ path: "/profile-own" })
       },
       logout: function(){
         store.dispatch(loggedOut());
