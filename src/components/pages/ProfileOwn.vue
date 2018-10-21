@@ -2,9 +2,9 @@
 <template>
   <div>
     <App-Header />
-    
+
     <div id="profile">
-      <h1>Work in progress</h1>
+      <h1>Work in progress...</h1>
       <h2>{{postCount}}</h2>
     </div>
   </div>
